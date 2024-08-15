@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Monitoring</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Plant Monitoring</h1>
+    <div class="container">
+        <div class="column">
+            <div class="transparent-container">
+                <h2>Bell Pepper Plant</h2>
+                <img src="peppers.png" alt="Bell Pepper Plant" id="plant-image">
+                <p class="justified">The plant is a tropical perennial, but it is usually grown as an annual vegetable. The plant grows upright and bushy. They have dark green lance-shaped leaves, small white flowers, and edible fruits. 
+                    The fruit is classified as a berry and ranges in color from green, yellow, orange, red, purple, black, and white.</p>
+                <div id="plant-info">
+                    <p>Humidity: <span id="humidity">Loading...</span></p>
+                    <p>pH Level: <span id="pH">Loading...</span></p>
+                    <p>Temperature: <span id="temperature">Loading...</span></p>
+                    <p>Light Intensity: <span id="light-intensity">Loading...</span></p>
+                </div>
+                <div id="historical-data">
+                    <h3>Historical Data</h3>
+                    <input type="date" id="date-picker">
+                    <button onclick="fetchHistoricalData()">View Data</button>
+                    <div id="historical-info"></div>
+                </div>
+            </div>
+        </div>
+        <div class="column

@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('pepper.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    opacity: 0.8; /* Set opacity for background image */
+    z-index: -1; /* Ensure it is behind all content */
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1; /* Ensure the container is above the background image */
+}
+
+.column {
+    padding: 10px;
+    position: relative;
+}
+
+.column:first-child {
+    flex: 1;
+    max-width: 35%;
+    padding-right: 20px; /* Add some padding to the right for spacing */
+}
+
+.column:last-child {
+    flex: 2;
+    max-width: 60%;
+}
+
+.scrollable {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.transparent-container {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+    padding: 15px;
+    border-radius: 7px; /* Optional: rounded corners */
+    position: relative;
+    z-index: 2; /* Ensure this container is above the background image */
+}
+
+#plant-title {
+    text-align: center; /* Center title horizontally */
+    margin-bottom: 10px;
+}
+
+#plant-image {
+    width: 200px; /* Adjust size as necessary */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center image horizontally */
+}
+
+#plant-description {
+    text-align: justify; /* Justify text alignment */
+}
+
+#plant-info {
+    text-align: left; /* Align plant info text to the left */
+}
+
+canvas {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 300px; /* Adjust size as necessary */
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity to make the graph more readable */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+#historical-data {
+    margin-top: 20px;
+}
